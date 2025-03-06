@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribunal Agroambiental</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            background-color: black;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .menu div {
+            padding: 10px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .social-icons img {
+            width: 20px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-rows: auto 1fr auto 1fr;
+            height: 100%;
+            flex-grow: 1;
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .menu-secundario {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            background-color: rgb(26, 65, 26);
+            color: white;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .menu-secundario div {
+            padding: 10px;
+        }
+
+        .menu-secundario .buscador {
+            grid-column: span 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menu-secundario .buscador img {
+            max-width: 100%;
+            max-height: 50%; 
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu">
+        <div>Publicaciones</div>
+        <div>Biblioteca</div>
+        <div>Eventos Académicos</div>
+        <div>Geoinformación</div>
+        <div>Sorteo de causas</div>
+        <div>Contáctenos</div>
+        <div class="social-icons">
+            <img src="./img/facebook.png" alt="Facebook">
+            <img src="./img/tiktok.png" alt="TikTok">
+            <img src="./img/youtube.png" alt="YouTube">
+            <img src="./img/twiter.png" alt="Twitter">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <img src="./img/primera_lab1.png" alt="Imagen 1">
+        </div>
+
+        <div class="box">
+            <div class="menu-secundario">
+                <div>Inicio</div>
+                <div>Institucional</div>
+                <div>Buscadores</div>
+                <div>Árbol de Jurisprudencia</div>
+                <div>Juzgados</div>
+                <div>Transparencia</div>
+                <div>Noticias</div>
+                <div class="buscador">
+                    <img src="./img/buscador.png" alt="Buscador">
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="./img/segunda_lab1.png" alt="Imagen 2">
+        </div>
+    </div>
+
+</body>
+</html>

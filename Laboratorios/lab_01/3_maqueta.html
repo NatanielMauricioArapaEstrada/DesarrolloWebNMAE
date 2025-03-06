@@ -5,215 +5,202 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contenedor Pantalla Completa</title>
     <style>
-        /* Eliminar márgenes y rellenos por defecto */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Asegurar que el body y el html ocupen toda la pantalla */
         html, body {
             width: 100%;
             height: 100%;
         }
 
-        /* Contenedor que ocupa toda la pantalla */
         .container_principal {
-            width: 100vw;  /* 100% del ancho de la ventana */
-            height: 100vh; /* 100% de la altura de la ventana */
+            width: 100vw;
+            height: 100vh;
             display: flex;
             flex-direction: column;
         }
 
         .container_superior{
-            width: 100vw;  /* 100% del ancho de la ventana */
-            height: 30%; /* 100% de la altura de la ventana */
+            width: 100vw;
+            height: 30%;
             display: flex;
             flex-direction: column;
             color: #ffffff;
         }
 
         .container_superior_1{
-            width: 100vw;  /* 100% del ancho de la ventana */
-            height: 80%; /* 100% de la altura de la ventana */
-            background-color: salmon; /* Color de fondo */
+            width: 100vw;
+            height: 80%;
+            background-color: salmon;
             display: flex;
-            justify-content: center; /* Centra horizontalmente */
-            align-items: center; /* Centra verticalmente */
+            justify-content: center;
+            align-items: center;
             flex-direction: column;
         }
 
         .container_superior_1_1{
-            width: 100vw;  /* 100% del ancho de la ventana */
-            height: 50%; /* 100% de la altura de la ventana */
+            width: 100vw;
+            height: 50%;
             font-size: large;
             display: flex;
-            justify-content: center; /* Centra horizontalmente */
+            justify-content: center;
             align-items: flex-end;
         }
 
         .container_superior_1_2{
-            width: 100vw;  /* 100% del ancho de la ventana */
-            height: 50%; /* 100% de la altura de la ventana */
+            width: 100vw;
+            height: 50%;
             font-size: small;
             display: flex;
-            justify-content: center; /* Centra horizontalmente */
+            justify-content: center;
             align-items: flex-start;
             margin: 20px auto;
         }
 
         .container_superior_2{
-            width: 100vw;  /* 100% del ancho de la ventana */
-            height: 20%; /* 100% de la altura de la ventana */
-            background-color: rgb(105, 232, 171); /* Color de fondo */
+            width: 100vw;
+            height: 20%;
+            background-color: rgb(105, 232, 171);
             display: flex;
-            justify-content: space-between; /* Centra horizontalmente */
-            align-items: center; /* Centra verticalmente */
+            justify-content: space-between;
+            align-items: center;
         }
 
         .container_superior_2_1{
-            width: auto;  /* 100% del ancho de la ventana */
-            height: 100%; /* 100% de la altura de la ventana */
+            width: auto;
+            height: 100%;
             display: flex;
-            align-items: center; /* Centra verticalmente */
+            align-items: center;
         }
 
         .container_superior_2_2{
-            width: auto;  /* 100% del ancho de la ventana */
-            height: 100%; /* 100% de la altura de la ventana */
+            width: auto;
+            height: 100%;
             display: flex;
-            align-items: center; /* Centra verticalmente */
+            align-items: center;
         }
 
-        /* Contenedor para los elementos de la barra */
         .nav-links {
             display: flex;
-            justify-content: center; /* Centra los enlaces */
-            list-style-type: none; /* Elimina los puntos de la lista */
+            justify-content: center;
+            list-style-type: none;
             margin: 0;
             padding: 0;
         }
 
-        /* Estilo para cada enlace */
         .nav-links li {
-            margin: 0 15px; /* Espaciado entre los elementos */
+            margin: 0 15px;
         }
 
-        /* Estilo para los enlaces */
         .nav-links a {
-            text-decoration: none; /* Elimina el subrayado */
-            color: white; /* Color del texto */
-            font-size: 18px; /* Tamaño de la fuente */
-            padding: 10px 20px; /* Relleno interno de los enlaces */
-            border-radius: 5px; /* Bordes redondeados */
-            transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
 
-        /* Estilo cuando el ratón pasa sobre el enlace */
         .nav-links a:hover {
-            background-color: #575757; /* Color de fondo cuando se pasa el ratón */
+            background-color: #575757;
         }
 
         .container_inferior{
-            width: 100%;  /* 100% del ancho de la ventana */
-            height: 70%; /* 100% de la altura de la ventana */
+            width: 100%;
+            height: 70%;
             display: flex;
             flex-direction: row;
         }
 
         .container_inferior_1{
-    width: 30%;
-    min-width: 415px;  /* 100% del ancho de la ventana */
-    height: 100%; /* 100% de la altura de la ventana */
-    background-color: rgb(178, 179, 178); /* Color de fondo */
-    display: flex;
-    justify-content: center; /* Centra los elementos hijos horizontalmente */
-    align-items: center; /* Centra los elementos hijos verticalmente */
-    padding: 15px;
-    flex-direction: column;
-}
+            width: 30%;
+            min-width: 415px;
+            height: 100%;
+            background-color: rgb(178, 179, 178);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            flex-direction: column;
+        }
 
-.container_inferior_1_1{
-    width: 400px;
-    height: 30px;
-    color: black;
-    text-align: start; /* Alinea el texto a la izquierda dentro del contenedor */
-    padding: 0;
-    margin-bottom: 2%; /* Agrega un margen de 10px en la parte inferior */
-    font-size:x-large;
-}
+        .container_inferior_1_1{
+            width: 400px;
+            height: 30px;
+            color: black;
+            text-align: start;
+            padding: 0;
+            margin-bottom: 2%;
+            font-size:x-large;
+        }
 
-
-.container_inferior_1_2 {
-    width: 30%;
-    min-width: 400px;  /* 100% del ancho de la ventana */
-    height: 400px;
-    background-color: rgb(167, 164, 164);
-    display: flex; /* Definir el contenedor como un contenedor flex */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    font-size: xx-large;
-    color: #303030;
-    padding: 0;
-}
-
+        .container_inferior_1_2 {
+            width: 30%;
+            min-width: 400px;
+            height: 400px;
+            background-color: rgb(167, 164, 164);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: xx-large;
+            color: #303030;
+            padding: 0;
+        }
 
         .container_inferior_2{
             width: 70%;
-            min-width: 683px;  /* 100% del ancho de la ventana */
-            height: 100%; /* 100% de la altura de la ventana */
-            background-color: rgb(243, 244, 243); /* Color de fondo */
+            min-width: 683px;
+            height: 100%;
+            background-color: rgb(243, 244, 243);
             display: flex;
-            justify-content: center; /* Centra horizontalmente */
+            justify-content: center;
             align-items: center;
             padding: 15px;
             flex-direction: column;
         }
 
         .container_inferior_2_1 {
-    width: 668px;
-    height: 70px;
-    color: black;
-    text-align: left; /* Alinea el texto a la izquierda dentro del contenedor */
-    padding: 0;
-    margin-bottom: 2%; /* Agrega un margen de 10px en la parte inferior */
-    font-size: large;
-    display: flex; /* Usa Flexbox para asegurar que el contenido se alinee a la izquierda */
-    justify-content: flex-start; /* Alinea el contenido de forma horizontal a la izquierda */
-    align-items: flex-start; /* Alinea el contenido de forma vertical a la parte superior */
-    flex-direction: column;
-}
+            width: 668px;
+            height: 70px;
+            color: black;
+            text-align: left;
+            padding: 0;
+            margin-bottom: 2%;
+            font-size: large;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+        }
 
+        .container_inferior_2_2 {
+            width: 30%;
+            min-width: 668px;
+            height: 200px;
+            background-color: rgb(167, 164, 164);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: xx-large;
+            color: #303030;
+            padding: 0;
+            text-align: center;
+        }
 
-.container_inferior_2_2 {
-    width: 30%;
-    min-width: 668px;  /* 100% del ancho de la ventana */
-    height: 200px;
-    background-color: rgb(167, 164, 164);
-    display: flex; /* Hacemos el contenedor un contenedor flex */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    font-size: xx-large;
-    color: #303030;
-    padding: 0;
-    text-align: center; /* Centra el texto dentro del contenedor */
-}
-
-
-.container_inferior_2_3 {
-    width: 668px;
-    height: 30px;
-    color: black;
-    text-align: left; /* Alinea el texto a la izquierda dentro del contenedor */
-    padding: 0;
-    margin-top: 2%; /* Agrega un margen en la parte superior */
-    display: flex; /* Usa Flexbox para asegurar que el contenido se alinee a la izquierda */
-    justify-content: flex-start; /* Alinea el contenido de forma horizontal a la izquierda */
-    align-items: flex-start; /* Alinea el contenido de forma vertical a la parte superior */
-}
-
-
+        .container_inferior_2_3 {
+            width: 668px;
+            height: 30px;
+            color: black;
+            text-align: left;
+            padding: 0;
+            margin-top: 2%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
     </style>
 </head>
 <body>

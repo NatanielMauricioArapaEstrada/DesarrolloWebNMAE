@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="E2.css">
+    <title>Temperaturas</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Unidades de Medida de Temperaturas</h1>
+        <form action="temperatura.php" method="get">
+            <label for="temperatura">Ingrese el valor de la temperatura:</label>
+            <input type="number" name="numero" required>
+            <label for="unidad">Seleccione la unidad correspondiente a la temperatura:</label>
+            <select name="unidad" required>
+                <option value="C">Celsius</option>
+                <option value="F">Fahrenheit</option>
+                <option value="K">Kelvin</option>
+            </select>
+            <input type="submit" value="Convertir">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+input, select {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #28a745;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 90%;
+}
+
+input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+td, th {
+    border: 2px solid #28a745;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+}
+
+th {
+    background-color: #28a745;
+    color: white;
+}
+
+.resultado {
+    font-size: 18px;
+    font-weight: bold;
+    color: #28a745;
+}

@@ -1,0 +1,94 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.superior {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b0c4de;
+    width: 900px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.logo {
+    width: 120px;
+    margin-left: 10px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.encabezado_text {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.encabezado_text h1 {
+    color: red;
+}
+
+.encabezado_text_h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezado_text_h2_azul h2 {
+    color: blue;
+}
+
+.encabezado_text_h2_color_variado {
+    display: flex;
+}
+
+.rojo h2 {
+    color: red;
+}
+
+.amarillo h2 {
+    color: yellow;
+}
+
+.verde h2 {
+    color: green;
+}
+
+.inferior {
+    display: flex;
+    width: 900px;
+    border: 1px solid black;
+    flex-direction: column;
+}
+
+.menu_izquierdo {
+    display: flex;
+    flex-direction: row;
+    background-color: #333;
+    width: 100%;
+    
+    align-items: center;
+    height: 50px;
+}
+
+.botones {
+    background-color: rgb(133, 128, 128);
+    margin: 50px 50px;
+    
+    text-align: center;
+    width: auto;
+    height: 40px;
+}
+
+.texto_derecho {
+    width: 780px;
+    padding: 20px;
+    background-color: #f8f8f8;
+}

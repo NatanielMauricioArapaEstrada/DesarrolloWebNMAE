@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Ítem Visual</title>
+</head>
+<body>
+    <h2>Crear visualización de un ítem</h2>
+
+    <form action="menu.php" method="post" enctype="multipart/form-data">
+        <label for="item">Item:</label>
+        <input type="text" name="item" id="item" required><br><br>
+
+        <label for="color">Color del texto:</label>
+        <input type="color" name="color" id="color" required><br><br>
+
+        <label for="color_fondo">Color de fondo:</label>
+        <input type="color" name="color_fondo" id="color_fondo" required><br><br>
+
+        <label for="imagen">Selecciona una imagen:</label>
+        <input type="file" name="imagen" id="imagen" accept="image/*" required><br><br>
+
+        <input type="submit" value="Enviar a menú">
+    </form>
+</body>
+</html>

@@ -2,14 +2,14 @@
 session_start();
 include 'estante.php';
 
-// Si no hay estante en sesión, crear uno nuevo
+
 if (!isset($_SESSION['estante'])) {
     $_SESSION['estante'] = serialize(new Estante());
 }
 
 $estante = unserialize($_SESSION['estante']);
 
-// Insertar libro si se envió el formulario
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['libro'], $_POST['fila'])) {
     $fila = intval($_POST['fila']);
     $libro = trim($_POST['libro']);
@@ -27,9 +27,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['libro'], $_POST['fila'
 </head>
 <body>
 
-<h2>📚 Estante de 3 Filas</h2>
+<h2>Estante de 3 Filas</h2>
 
-<!-- Formulario para insertar libros -->
+
 <h3>Insertar libro en una fila</h3>
 <form method="post">
     Libro: <input type="text" name="libro" required>
@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['libro'], $_POST['fila'
     <input type="submit" value="Insertar">
 </form>
 
-<!-- Mostrar fila específica -->
+
 <h3>Mostrar libros de una fila</h3>
 <form method="get">
     Seleccionar fila:
@@ -66,7 +66,7 @@ if (isset($_GET['mostrar_fila'])) {
 }
 ?>
 
-<!-- Mostrar todo el estante -->
+
 <h3>Mostrar todos los libros del estante</h3>
 <?php
 $todo = $estante->mostrarArmario();

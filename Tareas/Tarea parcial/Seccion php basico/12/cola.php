@@ -35,14 +35,14 @@ class Cola {
     }
 }
 
-// Inicializa la cola si no existe
+
 if (!isset($_SESSION['cola'])) {
-    $_SESSION['cola'] = serialize(new Cola('Normal')); // Puedes cambiar a 'dobleentrada'
+    $_SESSION['cola'] = serialize(new Cola('Normal')); 
 }
 
 $cola = unserialize($_SESSION['cola']);
 
-// Acciones según POST
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $accion = $_POST['accion'];
 
@@ -56,14 +56,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $cola->eliminar();
     } elseif ($accion == 'cambiar_tipo') {
         $tipo = $_POST['tipo'];
-        $cola = new Cola($tipo); // Reinicia la cola con tipo nuevo
+        $cola = new Cola($tipo); 
     }
 
     $_SESSION['cola'] = serialize($cola);
 }
 ?>
 
-<!-- Interfaz HTML -->
+
 <!DOCTYPE html>
 <html>
 <head>

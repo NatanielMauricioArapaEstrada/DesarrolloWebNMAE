@@ -1,16 +1,16 @@
 <?php
 include("conex.php");
 
-// Columnas válidas para ordenar
+
 $columnas_validas = ["titulo", "autor", "editorial", "anio"];
 $columna = isset($_GET['columna']) && in_array($_GET['columna'], $columnas_validas) ? $_GET['columna'] : "titulo";
 $orden = (isset($_GET['orden']) && $_GET['orden'] === "desc") ? "desc" : "asc";
 $nuevo_orden = ($orden === "asc") ? "desc" : "asc";
 
-// Ajustar columna si es editorial (porque el nombre viene de otra tabla)
+
 $columna_sql = ($columna === "editorial") ? "editoriales.editorial" : "libros.$columna";
 
-// Consulta con JOIN a editoriales
+
 $sql = "SELECT libros.imagen, libros.titulo, libros.autor, editoriales.editorial AS editorial, libros.anio
         FROM libros
         INNER JOIN editoriales ON libros.ideditorial = editoriales.id

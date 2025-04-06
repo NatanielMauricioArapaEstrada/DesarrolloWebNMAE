@@ -2,11 +2,11 @@
 // Configuramos la cookie
 if (isset($_COOKIE['visitas'])) {
     $visitas = $_COOKIE['visitas'] + 1;
-    setcookie("visitas", $visitas, time() + (86400 * 30)); // 30 días
+    setcookie("visitas", $visitas, time() + (86400 * 30)); 
     $mensaje = "Gracias por ser un visitante frecuente. Usted ha visitado este sitio $visitas veces.";
 } else {
     $visitas = 1;
-    setcookie("visitas", $visitas, time() + (86400 * 30)); // 30 días
+    setcookie("visitas", $visitas, time() + (86400 * 30)); 
     $mensaje = "Bienvenido. Es su primera visita a este sitio.";
 }
 ?>

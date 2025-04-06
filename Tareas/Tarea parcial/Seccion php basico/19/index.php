@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['numero'])) {
     $numero = intval($_POST['numero']);
-    setcookie("valor", $numero, time() + 3600); // cookie válida por 1 hora
+    setcookie("valor", $numero, time() + 3600); 
     header("Location: menu.php");
     exit();
 }

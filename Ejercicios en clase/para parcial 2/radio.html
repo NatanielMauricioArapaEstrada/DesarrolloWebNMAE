@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="radio" name="sexo" value="M"> Masculino
+<input type="radio" name="sexo" value="F"> Femenino
+<button onclick="verSexo()">Ver sexo</button>
+
+<p id="resultado"></p>
+
+<script>
+  function verSexo() {
+    const seleccion = document.querySelector('input[name="sexo"]:checked');
+    if (seleccion) {
+      document.getElementById("resultado").innerText = "Seleccionaste: " + seleccion.value;
+    } else {
+      document.getElementById("resultado").innerText = "No seleccionaste nada.";
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM en acción</title>
+  <style>
+    #caja {
+      padding: 20px;
+      margin: 20px 0;
+      border: 2px solid black;
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <h2>DOM: 4 ejemplos básicos</h2>
+
+  <!-- 1. Cambiar fondo -->
+  <button onclick="cambiarFondo()">Cambiar fondo de la caja</button><br><br>
+
+  <!-- 2. Agregar párrafo -->
+  <button onclick="agregarParrafo()">Agregar párrafo</button><br><br>
+
+  <!-- 3. Eliminar último párrafo -->
+  <button onclick="eliminarParrafo()">Eliminar último párrafo</button><br><br>
+
+  <!-- 4. Mostrar mensaje al escribir -->
+  <input type="text" placeholder="Escribe algo..." oninput="mostrarMensaje()" id="miInput">
+  <p id="mensaje"></p>
+
+  <div id="caja">
+    <p>Párrafo original dentro de la caja.</p>
+  </div>
+
+  <script>
+    // 1. Cambiar el color de fondo
+    function cambiarFondo() {
+      const caja = document.getElementById("caja");
+      caja.style.backgroundColor = "lightblue";
+    }
+
+    // 2. Agregar un nuevo párrafo
+    function agregarParrafo() {
+      const nuevo = document.createElement("p");
+      nuevo.innerText = "Nuevo párrafo agregado con JavaScript.";
+      document.getElementById("caja").appendChild(nuevo);
+    }
+
+    // 3. Eliminar el último párrafo de la caja
+    function eliminarParrafo() {
+      const caja = document.getElementById("caja");
+      const parrafos = caja.getElementsByTagName("p");
+      if (parrafos.length > 0) {
+        caja.removeChild(parrafos[parrafos.length - 1]);
+      }
+    }
+
+    // 4. Mostrar mensaje mientras se escribe
+    function mostrarMensaje() {
+      const texto = document.getElementById("miInput").value;
+      document.getElementById("mensaje").innerText = "Estás escribiendo: " + texto;
+    }
+  </script>
+</body>
+</html>
